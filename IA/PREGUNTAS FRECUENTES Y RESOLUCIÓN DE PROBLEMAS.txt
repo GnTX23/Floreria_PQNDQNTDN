@@ -1,0 +1,105 @@
+Este módulo está diseñado en un formato de pregunta y respuesta, para que Rosita pueda extraer la respuesta directa y ofrecerla de manera conversacional.
+
+Sección 1: Cuidados y Durabilidad (¡La más importante!)
+P: "¿Cómo puedo hacer que mis flores duren más tiempo?"
+R: "¡Claro! Siga estos pasos para una vida máxima de sus flores:
+
+Corte los tallos: Con una tijera limpia y afilada, corte al menos 2 cm de cada tallo en diagonal (esto maximiza el área de absorción). Hágalo bajo el agua del grifo si es posible.
+
+Limpie el jarrón: Use un jarrón perfectamente limpio para evitar bacterias.
+
+Agua limpia y nutrientes: Llene el jarrón con agua templada y agregue el sobre de alimento para flores que le incluimos. Si no tiene, puede añadir una gota de lejía para matar bacterias y una cucharadita de azúcar.
+
+Ubicación ideal: Manténgalas en un lugar fresco, lejos de la luz solar directa, de fuentes de calor (radiadores) y de frutas maduras (estas liberan etileno que marchita las flores).
+
+Mantenimiento: Cambie el agua y vuelva a cortar los tallos cada dos días."
+
+P: "¿Por qué se están marchitando mis flores tan rápido?"
+R: "Lamentamos oír eso. Las causas más comunes son:
+
+Bacterias en el agua: Por no limpiar el jarrón o no cambiar el agua.
+
+Tallos obstruidos: No cortarlos o hacerlo mal impide que beban agua.
+
+Calor o estrés ambiental: Demasiado sol o calor las deshidrata.
+
+Falta de nutrientes: El alimento floral es clave.
+Solución inmediata: Realice un corte de tallos bajo el agua y colóquelas en agua fresca con nutrientes. Deberían revivir en unas horas."
+
+P: "Mis flores no se abren, ¿están mal?"
+R: "¡No necesariamente! Muchas de nuestras flores, como las rosas o los tulipanes, se envían en estado de capullo para que usted disfrute de todo el proceso de apertura. Para ayudarlas:
+
+Asegúrese de que tengan agua limpia y nutrientes.
+
+Colóquelas en un ambiente más cálido (pero no con sol directo).
+
+Si son rosas, puede soplar suavemente en el centro del capullo con las manos ahuecadas para ayudar a abrirlas."
+
+Sección 2: Alergias y Seguridad
+P: "¿Tienen flores para personas alérgicas al polen?"
+R: "¡Sí! La buena noticia es que las flores más alergénicas son las de polen abundante y aireado. Le recomiendo:
+
+Flores con poco polen: Orquídeas, rosas (especialmente los capullos cerrados), claveles, peonías de doble flor (donde los estambres se han convertido en pétalos).
+
+Evitar: Lirios (sus estambres anaranjados tienen mucho polen), margaritas, girasoles y gladiolos.
+
+Pro-tip: Puedo preparar su ramo quitando manualmente los estambres de las flores para mayor seguridad."
+
+P: "Tengo un gato/perro, ¿estas flores son seguras?"
+R: "¡Es muy responsable preguntar! Algunas flores son tóxicas. Aquí tiene una guía rápida:
+
+Muy TÓXICAS para gatos: Lirios (¡todas las partes, incluso el agua del jarrón, son extremadamente peligrosas!), azucenas, tulipán (bulbo), narciso (bulbo).
+
+Tóxicas en general: Hortensias, dieffenbachia (plantas de interior comunes).
+
+FLORES SEGURAS: Rosas, orquídeas, girasoles, margaritas gerberas, violetas, estatice.
+Mi recomendación: Si tiene mascotas curiosas, elija entre nuestra selección de flores seguras. ¡Su tranquilidad es lo primero!"
+
+Sección 3: Selección y Personalización
+P: "No sé qué flores elegir, ¿puede ayudarme?"
+R: "¡Por supuesto! Es para lo que estoy aquí. Para hacer la recomendación perfecta, necesito que me cuente un poco:
+
+¿Cuál es la ocasión? (Cumpleaños, aniversario, para alegrar el día, etc.)
+
+¿Para quién es? (Pareja, amigo, familiar, colega).
+
+¿La persona tiene algún color, flor o estilo favorito?
+
+¿Prefiere un estilo de arreglo? (Moderno, clásico, rústico, de jardín).
+Con un par de estas respuestas, le daré 2 o 3 opciones fantásticas."
+
+P: "¿Puedo pedir un ramo con flores y colores específicos?"
+R: "¡Absolutamente! Nos especializamos en arreglos personalizados. Puede:
+
+Solicitar un ramo 100% a su gusto: Dígame las flores, colores y estilo, y lo crearemos para usted.
+
+Modificar un diseño existente: Por ejemplo, cambiar las rosas rojas de un ramo por rosas rosas.
+
+Nota: La disponibilidad de flores específicas puede variar según la estación, pero siempre haremos nuestro mejor esfuerzo por encontrar la alternativa más cercana y hermosa."
+
+P: "¿Cuál es la diferencia entre las rosas de lujo y las rosas normales?"
+R: "¡Buena pregunta! Las Rosas de Lujo (como las rosas 'Freedom' o 'Cool Water') son variedades premium cultivadas para:
+
+Tallos más largos y gruesos.
+
+Cabezas de flor más grandes y de forma perfecta.
+
+Pétalos más aterciopelados y colores más intensos.
+
+Una vida en jarrón significativamente más larga.
+Son la elección ideal para una ocasión muy especial donde el impacto visual y la duración son primordiales."
+
+Sección 4: Logística y Post-Compra
+P: "Mi flor se rompió durante el transporte / Llegó en mal estado."
+R: "¡Lo sentimos mucho! Nuestra prioridad es que quede 100% satisfecho.
+Por favor, envíenos una foto del problema a [correo/soporte de la web] en un plazo máximo de 24 horas.
+
+Le ofreceremos de inmediato: Sustituir el arreglo o un reembolso completo, según su preferencia.
+
+Para Rosita (protocolo interno): Derivar inmediatamente al cliente al servicio de atención al cliente con el mensaje: 'Lamentamos el inconveniente. Para resolverlo lo más rápido posible, nuestro equipo de soporte necesita una foto. ¿Puede enviársela a [link/email]?'"
+
+P: "Me equivoqué en la dirección de entrega, ¿qué hago?"
+R: "¡No se preocupe, suele pasar! Contacte a nuestro servicio de atención al cliente inmediatamente llamando al [número de teléfono]. Si el pedido no ha salido de nuestra tienda, podremos corregir la dirección. Si ya ha salido, haremos todo lo posible por contactar con el repartidor."
+
+P: "¿Hacen entregas el mismo día?"
+R: "¡Sí! Ofrecemos entrega el mismo día para pedidos realizados antes de [hora límite, ej: 14:00 o 16:00] en días laborables. Después de esa hora, la entrega se programará para el siguiente día hábil. Los fines de semana y festivos tienen una hora límite diferente que puede consultar en nuestra web."
