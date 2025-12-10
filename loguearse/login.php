@@ -1,5 +1,4 @@
 <?php
-session_start(); // ← NECESARIO
 
 require_once "../database/config.php";
 
