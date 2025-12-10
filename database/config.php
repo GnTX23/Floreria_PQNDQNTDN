@@ -1,21 +1,28 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-define('DB_HOST', getenv("MYSQLHOST")); 
-define('DB_USER', getenv("MYSQLUSER"));
-define('DB_PASS', getenv("MYSQLPASSWORD"));
-define('DB_NAME', getenv("MYSQLDATABASE"));
-define('DB_PORT', getenv("MYSQLPORT"));
-
 function conectarDB() {
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    // Intentamos obtener las variables de entorno de Railway
+    // Si no existen (porque estás en local), usamos valores por defecto (localhost)
+    
+    $host = getenv('MYSQLHOST');
+    $user = getenv('MYSQLUSER');
+    $pass = getenv('MYSQLPASSWORD');
+    $db   = getenv('MYSQLDATABASE');
+    $port = getenv('MYSQLPORT');
 
+
+    // Crear la conexión
+    $conn = new mysqli($host, $user, $pass, $db, $port);
+
+    // Verificar si hubo error
     if ($conn->connect_error) {
-        die("Error de conexión: " . $conn->connect_error);
+        // En producción (Railway) no queremos mostrar el error técnico exacto al usuario, 
+        // pero para depurar ahora mismo, dejémoslo así:
+        die("Error de conexión (Fatal): " . $conn->connect_error);
     }
 
-    $conn->set_charset("utf8mb4");
+    // Configurar charset a utf8 para que salgan bien las ñ y acentos
+    $conn->set_charset("utf8");
+
     return $conn;
 }
+?>
