@@ -1,11 +1,9 @@
 <?php
-
 ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+require_once __DIR__ . '/../database/config.php';
 
-require_once __DIR__ . "/../database/config.php";
 
 
 $error = '';
@@ -40,9 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             // Guardar el mensaje en sesión para evitar usar header + echo
-            $_SESSION['success'] = "¡Registro exitoso! Inicia sesión para continuar.";
+            $_SESSION['success'] = "¡Registro exitoso! Inicia sesión.";
             header("Location: ../loguearse/login.php");
-            exit();
+exit();
+
         } else {
             $error = "Error al registrar: " . $conn->error;
         }

@@ -20,4 +20,3 @@ function conectarDB() {
     $conn->set_charset("utf8mb4");
     return $conn;
 }
-?>

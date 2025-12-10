@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/../database/config.php';
 
 $error = '';
@@ -10,6 +9,7 @@ if (isset($_SESSION['success'])) {
     $success = $_SESSION['success'];
     unset($_SESSION['success']);
 }
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn = conectarDB();
@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Redirección limpia y sin errores
             header("Location: ../catalogo.php");
             exit();
+
 
         } else {
             $error = "Contraseña incorrecta";
