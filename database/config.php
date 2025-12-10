@@ -55,5 +55,30 @@ function conectarDB() {
 
     $conn->set_charset("utf8");
     return $conn;
+
+    // --- FUNCIONES DE SESIÓN ---
+
+function verificarSesion() {
+    // Si la sesión no está iniciada, la iniciamos
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    // Si el usuario NO tiene un ID en la sesión, lo mandamos al login
+    // Ajusta la ruta "../loguearse/login.php" si catalogo.php está en otra carpeta,
+    // pero generalmente para archivos en la raíz suele ser "loguearse/login.php".
+    if (!isset($_SESSION['cliente_id'])) {
+        // Detectamos dónde estamos para saber cómo regresar al login
+        // Si estamos en la raíz (ej. catalogo.php)
+        if (file_exists('loguearse/login.php')) {
+            header("Location: loguearse/login.php");
+        } 
+        // Si estamos en una subcarpeta (ej. scripts/carrito.php)
+        else {
+            header("Location: ../loguearse/login.php");
+        }
+        exit();
+    }
+}
 }
 ?>

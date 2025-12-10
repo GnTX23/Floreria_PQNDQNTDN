@@ -18,7 +18,10 @@ $sql_cat = "SELECT * FROM categorias";
 $categorias = $conn->query($sql_cat);
 
 $conn->close();
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
