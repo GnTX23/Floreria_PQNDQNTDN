@@ -4,7 +4,8 @@ error_reporting(E_ALL);
 
 echo "Probando include...<br>";
 
-require_once "../database/config.php";
+require_once __DIR__ . "/database/config.php";
 
 echo "config cargado!";
+
 
