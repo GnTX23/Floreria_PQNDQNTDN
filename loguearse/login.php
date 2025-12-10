@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="logo">Pa´que no digas que no te di nada</div>
     <nav class="nav">
       <a href="../Home.php">Inicio</a>
-      <a href="../loguerse/login.php">Rosita</a>
+      <a href="../loguearse/login.php">Rosita</a>
     </nav>
   </header>
 
