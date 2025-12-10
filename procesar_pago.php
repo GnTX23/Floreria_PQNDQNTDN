@@ -1,5 +1,5 @@
 <?php
-require_once "database/config.php";
+require_once __DIR__ . '/../database/config.php';
 verificarSesion();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

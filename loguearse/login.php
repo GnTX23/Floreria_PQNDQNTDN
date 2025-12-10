@@ -1,6 +1,6 @@
 <?php
 
-require_once "../database/config.php";
+require_once __DIR__ . '/../database/config.php';
 
 $error = '';
 $success = '';

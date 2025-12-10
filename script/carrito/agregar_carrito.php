@@ -1,5 +1,5 @@
 <?php
-require_once "../../database/config.php";
+require_once __DIR__ . '/../database/config.php';
 verificarSesion();
 
 header('Content-Type: application/json');

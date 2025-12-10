@@ -1,5 +1,5 @@
 <?php
-require_once 'database/config.php';
+require_once __DIR__ . '/../database/config.php';
 // NO usar verificarSesion() aquí - queremos que funcione con o sin login
 ?>
 <!DOCTYPE html>
