@@ -1,13 +1,16 @@
-<<?php
-// Configuración para Railway (producción)
+<?php
+
+session_start();
+
+// Configuración Railway
 define('DB_HOST', 'caboose.proxy.rlwy.net'); 
-define('DB_USER', 'root');                                      
-define('DB_PASS', 'zrujEdYSgTqSeUDjWWFeAYbVfifgPJvT');                
+define('DB_USER', 'root');
+define('DB_PASS', 'zrujEdYSgTqSeUDjWWFeAYbVfifgPJvT');
 define('DB_NAME', 'railway');
-define('DB_PORT', 15501);               
+define('DB_PORT', 15501);
+
 
 function conectarDB() {
-    // ORDEN CORRECTO: host, user, pass, db, port
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     if ($conn->connect_error) {
@@ -17,21 +20,3 @@ function conectarDB() {
     $conn->set_charset("utf8mb4");
     return $conn;
 }
-
-session_start();
-
-function verificarSesion() {
-    if (!isset($_SESSION['cliente_id'])) {
-        $ruta_login = $_SERVER['REQUEST_URI'];
-        
-        if (strpos($ruta_login, '/loguearse/') !== false || strpos($ruta_login, '/registros/') !== false) {
-            header("Location: ../loguearse/login.php");
-        } elseif (strpos($ruta_login, '/script/carrito/') !== false) {
-            header("Location: ../../loguearse/login.php");
-        } else {
-            header("Location: loguearse/login.php");
-        }
-        exit();
-    }
-}
-?>

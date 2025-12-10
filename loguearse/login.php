@@ -1,42 +1,52 @@
 <?php
+session_start(); // ← NECESARIO
+
 require_once "../database/config.php";
 
 $error = '';
 $success = '';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// Mostrar mensaje de registro exitoso (enviado desde registro.php)
+if (isset($_SESSION['success'])) {
+    $success = $_SESSION['success'];
+    unset($_SESSION['success']);
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn = conectarDB();
-    
-    if (isset($_POST['login'])) {
-        $email = $conn->real_escape_string($_POST['email']);
-        $password = $_POST['password'];
-        
-        $sql = "SELECT cliente_id, nombre, email, password FROM clientes WHERE email = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $resultado = $stmt->get_result();
-        
-        if ($resultado->num_rows == 1) {
-            $cliente = $resultado->fetch_assoc();
-            if (password_verify($password, $cliente['password'])) {
-                $_SESSION['cliente_id'] = $cliente['cliente_id'];
-                $_SESSION['cliente_nombre'] = $cliente['nombre'];
-                $_SESSION['email'] = $cliente['email'];
-                $success = "¡Inicio de sesión exitoso! Redirigiendo...";
-                // ✅ CAMBIO AQUÍ - Ruta relativa
-                header("refresh:1;url=../catalogo.php");
-                exit();
-            } else {
-                $error = "Contraseña incorrecta";
-            }
+
+    $email = $conn->real_escape_string($_POST['email']);
+    $password = $_POST['password'];
+
+    $sql = "SELECT cliente_id, nombre, email, password FROM clientes WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    if ($resultado->num_rows === 1) {
+        $cliente = $resultado->fetch_assoc();
+
+        if (password_verify($password, $cliente['password'])) {
+
+            // Guardar sesión
+            $_SESSION['cliente_id'] = $cliente['cliente_id'];
+            $_SESSION['cliente_nombre'] = $cliente['nombre'];
+            $_SESSION['email'] = $cliente['email'];
+
+            // Redirección limpia y sin errores
+            header("Location: ../catalogo.php");
+            exit();
+
         } else {
-            $error = "Usuario no encontrado";
+            $error = "Contraseña incorrecta";
         }
-        
-        $stmt->close();
+
+    } else {
+        $error = "Usuario no encontrado";
     }
-    
+
+    $stmt->close();
     $conn->close();
 }
 ?>
@@ -63,13 +73,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <?php if ($error): ?>
       <p style="color: #bb1c2f; text-align:center; background: #ffe6e6; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
-        <?php echo htmlspecialchars($error); ?>
+        <?= htmlspecialchars($error) ?>
       </p>
     <?php endif; ?>
 
     <?php if ($success): ?>
       <p style="color: #27ae60; text-align:center; background: #e8f8f5; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
-        <?php echo htmlspecialchars($success); ?>
+        <?= htmlspecialchars($success) ?>
       </p>
     <?php endif; ?>
 
@@ -79,7 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <button class="form-btn" type="submit" name="login">Acceder</button>
     </form>
 
-    <p style="text-align:center; margin-top:12px;">¿No tienes cuenta? <a href="../registros/registro.php">Regístrate</a></p>
+    <p style="text-align:center; margin-top:12px;">¿No tienes cuenta? 
+        <a href="../registros/registro.php">Regístrate</a>
+    </p>
   </div>
 
   <footer class="footer">
