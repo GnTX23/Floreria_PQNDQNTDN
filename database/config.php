@@ -1,14 +1,13 @@
 <<?php
-
-
+// Configuración para Railway (producción)
 define('DB_HOST', 'caboose.proxy.rlwy.net'); 
-define('DB_PORT', 15501);                    
-define('DB_USER', 'root');                     
-define('DB_PASS', 'zrujEdYSgTqSeUDjWWFeAYbVfifgPJvT');  
-define('DB_NAME', 'railway');                  
+define('DB_USER', 'root');                                      
+define('DB_PASS', 'zrujEdYSgTqSeUDjWWFeAYbVfifgPJvT');                
+define('DB_NAME', 'railway');
+define('DB_PORT', 15501);               
 
 function conectarDB() {
-    
+    // ORDEN CORRECTO: host, user, pass, db, port
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     if ($conn->connect_error) {
