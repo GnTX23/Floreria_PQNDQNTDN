@@ -406,9 +406,7 @@ $conn->close();
       </div>
       
       <div style="margin-top: 20px; padding: 15px; background: #e8f8f5; border-radius: 8px; font-size: 13px;">
-        <strong style="color: #27ae60;">✓ Envío incluido</strong><br>
-        <span style="color: #666;">Entrega estimada: 1-3 días hábiles</span>
-      </div>
+        <strong style="color: #27ae60;">Entrega estimada: 2 - 24 horas</strong><br>
     </div>
   </div>
 
