@@ -1,5 +1,15 @@
 <?php
+// 1. IMPORTANTE: Iniciar sesión al principio de todo
+// Sin esto, la variable $_SESSION no se guarda y el login se "olvida" al redirigir.
+session_start();
+
 require_once __DIR__ . "/../database/config.php";
+
+// Si el usuario ya está logueado, lo mandamos directo al catálogo
+if (isset($_SESSION['cliente_id'])) {
+    header("Location: ../catalogo.php");
+    exit();
+}
 
 $error = '';
 $success = '';
@@ -10,12 +20,12 @@ if (isset($_SESSION['success'])) {
     unset($_SESSION['success']);
 }
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn = conectarDB();
 
     $email = $conn->real_escape_string($_POST['email']);
-    $password = $_POST['password'];
+    // Importante: No escapar el password antes de verificarlo, password_verify necesita el string puro
+    $password = $_POST['password']; 
 
     $sql = "SELECT cliente_id, nombre, email, password FROM clientes WHERE email = ?";
     $stmt = $conn->prepare($sql);
@@ -28,15 +38,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (password_verify($password, $cliente['password'])) {
 
-            // Guardar sesión
+            // Guardar sesión (AHORA SÍ FUNCIONARÁ PORQUE HAY session_start ARRIBA)
             $_SESSION['cliente_id'] = $cliente['cliente_id'];
             $_SESSION['cliente_nombre'] = $cliente['nombre'];
             $_SESSION['email'] = $cliente['email'];
 
-            // Redirección limpia y sin errores
+            // Redirección
             header("Location: ../catalogo.php");
             exit();
-
 
         } else {
             $error = "Contraseña incorrecta";
