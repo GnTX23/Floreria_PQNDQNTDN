@@ -180,14 +180,8 @@ unset($_SESSION['pedido_exitoso']); // Limpiar después de mostrar
         </div>
       </div>
       
-      <div style="background: #fff3cd; padding: 15px; border-radius: 8px; font-size: 14px; color: #856404;">
-        <strong>💡 Importante:</strong> Recibirás un correo de confirmación con los detalles de tu pedido.
-      </div>
-      
       <div class="acciones">
         <a href="catalogo.php" class="btn-accion btn-primario">Seguir Comprando</a>
-        <a href="Home.php" class="btn-accion btn-secundario">Volver al Inicio</a>
-      </div>
     </div>
   </div>
 
